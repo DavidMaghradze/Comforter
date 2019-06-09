@@ -37,20 +37,18 @@
         animation: after .8s forwards;
     }
 
-    .yellow {
+    .logo__yellow-arc {
         transform: translate(13px, -38px);
         text-align: left;
 
         .logo__arc {
-            animation: yellowAnimation 1s forwards;
+            animation: yellowArcAnimation 1s forwards;
         }
     }
-}
 
-/// --- 
+    // Large Logo styles
 
-.logo {
-    .logo--large {
+    &--large {
         .letterFromBottom {
             transform: translate(0, 160%);
             transition: .5s 1.2s;
@@ -77,6 +75,13 @@
             }
         }
     }
+
+    // -----------------
+}
+
+/// --- 
+
+.logo {
 
     &--large-show {
 
@@ -131,55 +136,10 @@
             animation: afterDir .8s .5s forwards;
         }
 
-        .yellow {
+        &__yellow-arc {
             .logo__arc {
-                animation: yellowAnimationReverse 1s forwards;
+                animation: yellowArcAnimationReverse 1s forwards;
             }
         }
     }
-}
-
-@keyframes letterRight {
-    from { transform: translateX(100%); opacity: 1; }
-    to { transform: translateX(0);  opacity: 1; }
-}
-
-@keyframes letterBottom {
-    from { transform: translateY(0, -160%); }
-    to {transform: translateY(0,0); }
-}
-
-@keyframes yellowLetter {
-    from { transform: rotate(90deg) translate(-20px, 18px); opacity: 1; }
-    to { transform: rotate(0) translate(0,0); opacity: 1; }
-}
-
-@keyframes afterDir {
-    from {transform: translate(0, 40px); }
-    to { transform: translate(0, 0) }
-}
-
-@keyframes beforeDir {
-    from {transform: translate(0, -40px); }
-    to { transform: translate(0, 0) }
-}
-
-@keyframes after {
-    from { transform: translate(0, 0) }
-    to {transform: translate(0, 40px); }
-}
-
-@keyframes before {
-    from { transform: translate(0, 0) }
-    to {transform: translate(0, -40px);  }
-}
-
-@keyframes afterReverse {
-    from {transform: translate(0, 0); }
-    to {transform: translate(0, -40px); }
-}
-
-@keyframes beforeReverse {
-    from { transform: translate(0, 0) }
-    to {transform: translate(0, 40px);  }
 }

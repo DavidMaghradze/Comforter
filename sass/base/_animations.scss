@@ -1,48 +1,59 @@
-@keyframes logoAnimation {
-    from { stroke-dashoffset: 300 }
-    to { stroke-dashoffset: 0 }
+// Circle animations
+@keyframes afterDir {
+    from {transform: translate(0, 40px); }
+    to { transform: translate(0, 0) }
 }
 
-@keyframes logoAnimationReverse {
-    from { stroke-dashoffset: 0 }
-    to { stroke-dashoffset: 300 }
+@keyframes beforeDir {
+    from {transform: translate(0, -40px); }
+    to { transform: translate(0, 0) }
 }
 
-@keyframes yellowAnimation {
+@keyframes after {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, 40px); }
+}
+
+@keyframes before {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, -40px);  }
+}
+
+@keyframes afterReverse {
+    from {transform: translate(0, 0); }
+    to {transform: translate(0, -40px); }
+}
+
+@keyframes beforeReverse {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, 40px);  }
+}
+
+// ---------------------------------------------
+
+@keyframes zeroToFullWidth {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes zeroToFullHeight {
+    from { height: 0 }
+    to { height: 100% }
+}
+
+@keyframes yellowArcAnimation {
     from { transform: rotate(-120deg) }
     to { transform: rotate(0deg) }
 }
 
-@keyframes yellowAnimationReverse {
+@keyframes yellowArcAnimationReverse {
     from { transform: rotate(0deg); opacity: 1; }
     to { transform: rotate(-120deg); opacity: 0;}
-}
-
-@keyframes hamburger {
-    from { width: 0 }
-    to { width: 100% }
 }
 
 @keyframes flyFromBottom {
     from { transform: translateY(500px); }
     to { transform: translateY(0); }
-}
-
-@keyframes slideIn {
-    to { transform: translateX(0) }
-}
-
-@keyframes slideOut {
-    to { transform: translateX(-100%) }
-}
-
-@keyframes slide2 {
-    to { transform: translateX(-200%) }
-}
-
-@keyframes height {
-    from { height: 0 }
-    to { height: 100% }
 }
 
 @keyframes fadeIn {
@@ -60,12 +71,12 @@
     to { transform: scale(1);}
 }
 
-@keyframes opacity {
+@keyframes opacityToZero {
     from { opacity: 1; }
     to { opacity: 0; }
 }
 
-@keyframes sliderContentArticle {
+@keyframes opacityToOne {
     from { opacity: 0; }
     to { opacity: 1; }
 }
@@ -80,7 +91,27 @@
     to { opacity: 1; transform: translateX(0) }
 }
 
-@keyframes leftbar {
-    from { overflow: hidden; width: 60px }
-    to { overflow: visible; width: 370px }
+@keyframes scrollDownIn {
+    from { transform: translateY(40px) }
+    to { transform: translateY(0) }
+}
+
+@keyframes scrollDonwTextIn {
+    from { transform: translateY(10px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes scrollDownIconIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes scrollArrowAnimation {
+    from { transform: translateY(-100%); visibility: hidden; }
+    to { transform: translateY(120%); visibility: visible }
+}
+
+@keyframes leftbarCatsIn {
+    from { transform: translateX(-100%) }
+    to { transform: translateX(0) }
 }

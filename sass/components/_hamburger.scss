@@ -17,53 +17,6 @@
         left: 170px;
     }
 
-    .hamburger {
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        z-index: 4;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: 15px;
-        cursor: pointer;
-
-        &__union {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%) scaleY(0);
-            transition: .5s .5s;
-
-            &--show {
-                transform: translateX(-50%) scaleY(1);
-            }
-        }
-
-        &__rec {
-            transition: .5s;
-            &--hide {
-                opacity: 0;
-            }
-        }
-
-        &__line {
-            position: absolute;
-            background: #222E46;
-            height: 5px;
-            width: 0;
-            transition: .5s;
-    
-            &--top {
-                animation: hamburger .5s .2s forwards;
-            }
-    
-            &--bottom {
-                top: 10px;
-                animation: hamburger 1s .2s forwards;
-            }
-        }
-    }
-
     .topnav {
         width: 100%;
         transform: scaleX(0);
@@ -105,5 +58,96 @@
         .topnav {
             transform: scaleX(1);
         }
+    }
+}
+
+.hamburger {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    top: 96px;
+    margin-left: 15px;
+    cursor: pointer;
+
+    &__union {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scaleY(0);
+        transition: .5s .5s;
+
+        &--show {
+            transform: translateX(-50%) scaleY(1);
+        }
+    }
+
+    &__rec {
+        transition: .5s;
+        &--hide {
+            opacity: 0;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        background: #222E46;
+        height: 5px;
+        width: 0;
+        transition: .5s;
+
+        &--top {
+            animation: zeroToFullWidth .5s .2s forwards;
+        }
+
+        &--bottom {
+            top: 10px;
+            animation: zeroToFullWidth 1s .2s forwards;
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .menu {
+        .topnav {
+            ul {
+                margin-left: 40px;
+
+                li:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: 100%;
+        transform: scale(0);
+        transform-origin: left top;
+        transition: .3s;
+
+
+        .hamburger {
+            top: 10%;
+        }
+    
+        .topnav {
+            transform: scale(1);
+
+            .topnav__item {
+                transform: translateY(0);
+            }
+
+            ul {
+                display: block;
+            }
+        }
+    }
+
+    .menu--show {
+        transform: scale(1);
     }
 }

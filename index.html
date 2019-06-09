@@ -13,27 +13,27 @@
 </head>
 <body>
     <div class="home">
+        <div class="hamburger">
+            <svg class="hamburger__rec" xmlns="http://www.w3.org/2000/svg" width="26.402" height="13.883" viewBox="0 0 26.402 13.883">
+                <g id="Group_113" data-name="Group 113" transform="translate(-17.84 -104.921)">
+                    <rect class="hamburger__line hamburger__line--top" data-name="Rectangle 13" width="26.402" height="4.883" transform="translate(17.84 104.921)" fill="#222e46"/>
+                    <rect class="hamburger__line hamburger__line--bottom"data-name="Rectangle 14" width="26.402" height="4.883" transform="translate(17.84 113.921)" fill="#222e46"/>
+                </g>
+            </svg>
+            <svg class="hamburger__union" xmlns="http://www.w3.org/2000/svg" width="22.123" height="22.123" viewBox="0 0 22.123 22.123">
+              <path id="Union_2" data-name="Union 2" d="M-2371-6008.331l7.609-7.608-7.609-7.608,3.453-3.453,7.609,7.608,7.608-7.607,3.453,3.452-7.608,7.608,7.608,7.608-3.453,3.452-7.608-7.607-7.609,7.609Z" transform="translate(2371.001 6027)" fill="#fff"/>
+            </svg>
+          </div>
         <div class="menu">
             <svg class="menu__arc" id="Group_149" data-name="Group 149" xmlns="http://www.w3.org/2000/svg" width="43.347" height="13.32" viewBox="0 0 43.347 13.32">
               <path id="Path_10" data-name="Path 10" d="M3.8,2.339A30.039,30.039,0,0,1-17.859-6.674l4.891-4.291-2.445,2.146,2.434-2.159c.249.279,6.224,2.159,16.783,2.159,10.644,0,16.758-2.094,16.82-2.162l4.864,4.323a30.327,30.327,0,0,1-21.684,9" transform="translate(17.859 10.981)" fill="#fff"/>
             </svg>
-            <div class="hamburger">
-              <svg class="hamburger__rec" xmlns="http://www.w3.org/2000/svg" width="26.402" height="13.883" viewBox="0 0 26.402 13.883">
-                  <g id="Group_113" data-name="Group 113" transform="translate(-17.84 -104.921)">
-                      <rect class="hamburger__line hamburger__line--top" data-name="Rectangle 13" width="26.402" height="4.883" transform="translate(17.84 104.921)" fill="#222e46"/>
-                      <rect class="hamburger__line hamburger__line--bottom"data-name="Rectangle 14" width="26.402" height="4.883" transform="translate(17.84 113.921)" fill="#222e46"/>
-                  </g>
-              </svg>
-              <svg class="hamburger__union" xmlns="http://www.w3.org/2000/svg" width="22.123" height="22.123" viewBox="0 0 22.123 22.123">
-                <path id="Union_2" data-name="Union 2" d="M-2371-6008.331l7.609-7.608-7.609-7.608,3.453-3.453,7.609,7.608,7.608-7.607,3.453,3.452-7.608,7.608,7.608,7.608-3.453,3.452-7.608-7.607-7.609,7.609Z" transform="translate(2371.001 6027)" fill="#fff"/>
-              </svg>
-            </div>
             <nav class="topnav">
               <ul>
                 <li><a class="topnav__item" href="#">Products</a></li>
                 <li><a class="topnav__item" href="#">Rooms</a></li>
                 <li><a class="topnav__item" href="#">Offers & Discounts</a></li>
-                <li><a class="topnav__item topnav__item--divider">|</a></li>
+                <li><span class="topnav__item topnav__item--divider">|</span></li>
                 <li><a class="topnav__item" href="#">Why Comforter</a></li>
                 <li><a class="topnav__item" href="#">Partners</a></li>
                 <li><a class="topnav__item" href="#">Faq</li>
@@ -47,7 +47,7 @@
             <header class="left-bar__header">
                 <div class="logo">
                           <div class="circle"></div>
-                          <div class="yellow">
+                          <div class="logo__yellow-arc">
                                 <svg class="logo__arc" xmlns="http://www.w3.org/2000/svg" width="32.418" height="46.001" viewBox="0 0 32.418 46.001">
                                     <g data-name="Group 16" transform="translate(0 0)">
                                       <g data-name="Group 10" transform="translate(0 36.039)">
@@ -117,11 +117,11 @@
             <div class="left-bar__content">
                 <div class="left-bar__search">
                     <form class="left-bar__form">
-                        <input>
+                        <input placeholder="Product search">
                         <div class="button">
                                 <button>
-                                        <div class="circle"></div>
-                                        <div class="search-icon">
+                                      <div class="circle"></div>
+                                       <div class="search-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="23.826" height="23.774" viewBox="0 0 23.826 23.774">
                                                 <g id="Group_137" data-name="Group 137" transform="translate(-283.501 -181.181)">
                                                 <g id="Group_117" data-name="Group 117" transform="translate(-3.827 -3.003)">
@@ -134,14 +134,15 @@
                                                 </g>
                                                 </g>
                                             </svg>
-                                        </div>
-                                    </button>
+                                      </div>
+                                 </button>
                         </div>
                     </form>
                 </div>
                 <nav class="left-bar__nav">
                     <ul>
-                        <li><a class="left-bar__nav-item" href="#">
+                        <li>
+                            <a class="left-bar__nav-item" href="#">
                                 <svg id="armchair" xmlns="http://www.w3.org/2000/svg" width="31.376" height="31.376" viewBox="0 0 31.376 31.376">
                                     <g id="Group_52" data-name="Group 52">
                                       <g id="Group_45" data-name="Group 45" transform="translate(17.114 11.409)">
@@ -168,8 +169,9 @@
                                     </g>
                                  </svg>
                                  <span class="left-bar__nav-circle"></span>
-                                 <h3 class="left-bar__nav-title">Forniture</h3>
-                        </a></li>
+                                 <h3 class="left-bar__nav-title"><span>Forniture</span></h3>
+                            </a>
+                        </li>
                         <li><a class="left-bar__nav-item" href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20.231" height="27.083" viewBox="0 0 20.231 27.083">
                                     <g id="Group_134" data-name="Group 134" transform="translate(-1755.132 -7801.784)">
@@ -188,7 +190,7 @@
                                     </g>
                                 </svg>                                  
                                 <span class="left-bar__nav-circle"></span>
-                                <h3 class="left-bar__nav-title">Bed linen</h3>
+                                <h3 class="left-bar__nav-title"><span>Bed linen</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.935" height="33.596" viewBox="0 0 20.935 33.596">
@@ -206,7 +208,7 @@
                                 </g>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">Kitchen equipment</h3>
+                            <h3 class="left-bar__nav-title"><span>Kitchen equipment</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36.561" height="14.037" viewBox="0 0 36.561 14.037">
@@ -219,21 +221,21 @@
                                 </g>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">Comfort</h3>
+                            <h3 class="left-bar__nav-title"><span>Comfort</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30.753" height="27.678" viewBox="0 0 30.753 27.678">
                                 <path id="Subtraction_3" data-name="Subtraction 3" d="M-2341.018-7448.322a.767.767,0,0,1-.728-.525l-1.364-4.088h-3.5l-1.362,4.088a.771.771,0,0,1-.73.525.744.744,0,0,1-.244-.042.77.77,0,0,1-.486-.972l1.537-4.612a.774.774,0,0,1,.732-.527h4.058l1.362-4.086a.771.771,0,0,1,.732-.524.781.781,0,0,1,.24.039.771.771,0,0,1,.488.972l-1.458,4.37,1.458,4.37a.77.77,0,0,1-.488.972A.73.73,0,0,1-2341.018-7448.322Zm-13.068,0h-3.075a.77.77,0,0,1-.769-.77.77.77,0,0,1,.769-.769h.767v-7.689h-3.075a.768.768,0,0,1-.768-.767.769.769,0,0,1,.768-.77h3.075v-7.687h-12.3a.77.77,0,0,1-.769-.769v-1.539a.771.771,0,0,1,.443-.694l13.07-6.15a.759.759,0,0,1,.326-.074.759.759,0,0,1,.327.074l13.07,6.15a.771.771,0,0,1,.443.694v1.539a.77.77,0,0,1-.769.769h-12.3v7.687h3.075a.77.77,0,0,1,.769.77.769.769,0,0,1-.769.767h-3.075v7.689h.769a.769.769,0,0,1,.767.769A.769.769,0,0,1-2354.086-7448.322Zm-1.539-26.241a.531.531,0,0,0-.225.051l-10.741,4.972a.53.53,0,0,0-.3.478v.323a.531.531,0,0,0,.529.531h21.483a.531.531,0,0,0,.529-.531v-.323a.53.53,0,0,0-.3-.478l-10.741-4.972A.526.526,0,0,0-2355.624-7474.563Zm-6.918,26.241a.773.773,0,0,1-.732-.525l-1.362-4.088h-3.5l-1.362,4.088a.772.772,0,0,1-.73.525.775.775,0,0,1-.244-.04.772.772,0,0,1-.486-.974l1.456-4.37-1.456-4.368a.773.773,0,0,1,.486-.974.788.788,0,0,1,.241-.039.772.772,0,0,1,.733.524l1.36,4.086h4.06a.77.77,0,0,1,.73.527l1.537,4.612a.771.771,0,0,1-.486.974A.773.773,0,0,1-2362.542-7448.322Z" transform="translate(2371 7476)" fill="#222e46"/>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">Outdoor Furniture</h3>
+                            <h3 class="left-bar__nav-title"><span>Outdoor Furniture</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26.273" height="27.808" viewBox="0 0 26.273 27.808">
                                 <path id="kids-2" d="M29.9,12.685a.745.745,0,0,0-.745.745v9.626H20.2a3.778,3.778,0,0,0-3.7-3.027H15.489a.745.745,0,1,0,0,1.49H16.5A2.284,2.284,0,0,1,18.785,23.8a11.116,11.116,0,0,0,22.232,0s0,0,0,0A11.129,11.129,0,0,0,29.9,12.685Zm0,20.742a9.639,9.639,0,0,1-9.6-8.881H39.5A9.64,9.64,0,0,1,29.9,33.427Zm.745-10.371V14.2A9.642,9.642,0,0,1,39.5,23.056ZM25.524,34.78a2.857,2.857,0,1,0,2.856,2.856A2.86,2.86,0,0,0,25.524,34.78Zm0,4.223a1.366,1.366,0,1,1,1.366-1.366A1.368,1.368,0,0,1,25.524,39Zm8.755-4.223a2.857,2.857,0,1,0,2.856,2.856A2.86,2.86,0,0,0,34.279,34.78Zm0,4.223a1.366,1.366,0,1,1,1.366-1.366A1.368,1.368,0,0,1,34.279,39Z" transform="translate(-14.744 -12.685)" fill="#222e46"/>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">Kids Furniture</h3>
+                            <h3 class="left-bar__nav-title"><span>Kids Furniture</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25.578" height="19.982" viewBox="0 0 25.578 19.982">
@@ -244,7 +246,7 @@
                                 </g>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">Office</h3>
+                            <h3 class="left-bar__nav-title"><span>Office</span></h3>
                         </a></li>
                         <li><a class="left-bar__nav-item" href="#">
                             <svg id="console" xmlns="http://www.w3.org/2000/svg" width="31.376" height="29.95" viewBox="0 0 31.376 29.95">
@@ -256,10 +258,13 @@
                                     </g>
                             </svg>
                             <span class="left-bar__nav-circle"></span>
-                            <h3 class="left-bar__nav-title">More</h3>
+                            <h3 class="left-bar__nav-title"><span>More</span></h3>
                         </a></li>
                     </ul>
                 </nav>
+                <div class="leftbar-cats">
+                  <span>Categories</span>
+                </div>
             </div>
             <footer class="left-bar__footer left-bar__socials">
                 <a class="left-bar__socials--fb" href="#">
@@ -322,11 +327,21 @@
                             <a class="slider__article-more" href="#"><p><span>Discover more</span></p></a>
                         </section>
                     </div>
-            </div>
+                </div>
         </div>
+        <div class="scroll-down">
+            <span class="scroll-down__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26.222" height="14.108" viewBox="0 0 26.222 14.108">
+                  <path id="Path_113" data-name="Path 113" d="M36.752,988.318a2.51,2.51,0,0,0-1.4.6l-10.539,9.034a2.51,2.51,0,1,0,3.262,3.811l8.908-7.638,8.908,7.639a2.51,2.51,0,1,0,3.262-3.811l-10.539-9.034a2.51,2.51,0,0,0-1.866-.6Z" transform="translate(50.098 1002.417) rotate(180)" fill="#fac112"/>
+                </svg>
+            </span>
+            <p>Scroll Down</p>
+          </div>
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="app.js"></script>
 </body>
