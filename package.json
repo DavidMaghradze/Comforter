@@ -1,0 +1,14 @@
+{
+  "name": "comforter",
+  "version": "1.0.0",
+  "description": "Comforter Website",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

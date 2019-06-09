@@ -1,0 +1,185 @@
+.logo {
+    height: 40px;
+    overflow: hidden;
+
+    .logo__arc {
+        transform: rotate(-120deg)
+    }
+    
+    .circle {
+        margin-left: 14px;
+        width: 30px;
+        height: 30px;
+        border: 4px solid #333;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .circle:before, .circle:after {
+        content: '';
+        position: absolute;
+        width: 68%;
+        height: 141%;
+        background: #fff;
+    }
+
+    .circle:before {
+        left: -4px;
+        bottom: -4px;
+        transform: translate(0 ,0);
+        animation: before .8s .4s forwards;
+    }
+
+    .circle:after {
+        right: -4px;
+        top: -5px;
+        transform: translate(0 ,0);
+        animation: after .8s forwards;
+    }
+
+    .yellow {
+        transform: translate(13px, -38px);
+        text-align: left;
+
+        .logo__arc {
+            animation: yellowAnimation 1s forwards;
+        }
+    }
+}
+
+/// --- 
+
+.logo {
+    .logo--large {
+        .letterFromBottom {
+            transform: translate(0, 160%);
+            transition: .5s 1.2s;
+        }
+    
+        .letterFromRight {
+            opacity: 0;
+            display: inline-block;
+            transform: translateX(100%);
+            transition: .5s 1.3s;
+        }
+    
+        .letter-logo {
+            opacity: 0;
+            transition: 1s 1s;
+    
+            &__yellow {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                opacity: 0;
+                transform: rotate(90deg) translate(-20px,18px);
+                transition: 1s .8s;
+            }
+        }
+    }
+
+    &--large-show {
+
+        .logo--large {
+            .letter-logo {
+                opacity: 1;
+        
+                &__yellow {
+                    opacity: 1;
+                transform: rotate(0deg) translate(0,0);
+                }
+            }
+    
+            .letterFromBottom {
+                transform: translate(0,0);
+            }
+    
+            .letterFromRight {
+                opacity: 1;
+                transform: translateX(0); 
+            }
+        }
+    }
+}
+
+
+/// ---
+
+.left-bar--large {
+    .logo {
+        text-align: center;
+
+        &--large {
+            height: 46px;
+            display: inline-block;
+            overflow: hidden;
+            transform: translateY(-80px);
+
+            .letter-logo-content {
+                display: inline-block;
+                position: relative;
+            }
+        }
+
+        .circle:before {
+            transform: translate(0 ,-40px);
+            animation: beforeDir .8s forwards;
+        }
+    
+        .circle:after {
+            transform: translate(0 ,40px);
+            animation: afterDir .8s .5s forwards;
+        }
+
+        .yellow {
+            .logo__arc {
+                animation: yellowAnimationReverse 1s forwards;
+            }
+        }
+    }
+}
+
+@keyframes letterRight {
+    from { transform: translateX(100%); opacity: 1; }
+    to { transform: translateX(0);  opacity: 1; }
+}
+
+@keyframes letterBottom {
+    from { transform: translateY(0, -160%); }
+    to {transform: translateY(0,0); }
+}
+
+@keyframes yellowLetter {
+    from { transform: rotate(90deg) translate(-20px, 18px); opacity: 1; }
+    to { transform: rotate(0) translate(0,0); opacity: 1; }
+}
+
+@keyframes afterDir {
+    from {transform: translate(0, 40px); }
+    to { transform: translate(0, 0) }
+}
+
+@keyframes beforeDir {
+    from {transform: translate(0, -40px); }
+    to { transform: translate(0, 0) }
+}
+
+@keyframes after {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, 40px); }
+}
+
+@keyframes before {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, -40px);  }
+}
+
+@keyframes afterReverse {
+    from {transform: translate(0, 0); }
+    to {transform: translate(0, -40px); }
+}
+
+@keyframes beforeReverse {
+    from { transform: translate(0, 0) }
+    to {transform: translate(0, 40px);  }
+}

@@ -1,0 +1,37 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.home {
+    display: flex;
+    height: 95vh;
+    overflow: hidden;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
