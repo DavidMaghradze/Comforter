@@ -2,7 +2,7 @@ $( document ).ready(function() {
   var leftbarCirclesDelay = 0;
   var topnavItemDelay = 0;
   var leftbarIconsDelay = 0;
-
+  var innerWidth = window.innerWidth;
 
   // Set Delay on leftbar circles
   $('.left-bar__nav-circle').each( function(index, item){
@@ -64,7 +64,6 @@ $( document ).ready(function() {
     $('.menu__arc').addClass('onLarge');
     $('.logo').addClass('logo--large-show');
     $('.left-bar__form').addClass('left-bar__form--shown');
-
     $('.left-bar__nav-item').each(function(){
       leftbarIconsDelay += 100;
       var element = $(this);
@@ -91,9 +90,11 @@ $( document ).ready(function() {
         $('.left-bar__form').removeClass('left-bar__form--shown');
         $('.scroll-down').removeClass('toright');
         $('.owl-item.active').removeClass('active-closed');
-        $('.leftbar-cats ').show();
         owl.trigger('play.owl.autoplay');
-
+        if(innerWidth<=768) {
+          console.log('dada')
+          $('.leftbar-cats').show();
+        }
         $('.left-bar__nav-item svg').each(function(){
           var element = $(this);
           element.removeClass('svgFlyIn');

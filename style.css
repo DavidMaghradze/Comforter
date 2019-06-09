@@ -438,7 +438,7 @@ input {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
-    margin-top: 50px; }
+    margin-top: 20px; }
     .left-bar__socials a {
       display: inline-block;
       transform: translateY(100px); }
